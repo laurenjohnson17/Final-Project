@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<title> Final Project Page 3 </title>
+	<link href="styles/styles.css" rel="stylesheet">
+	<link href="lib/jquery.bxslider.css" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+	<body class="menu">
+
+	<div id="computers">
+	<img class="computer" id="ecomputers" src="images/Eniac.jpg" alt="computer" ></div>
+    <div id="everything">
+	<header>
+		<div id="menu">
+		<a href="#" class="menu-toggle"> Click to Navigate </a>
+		</div>
+			<nav class="menu-side">
+					Table of Contents
+				<div id="contents">
+				<ul>
+					<li><a href="two.html"> Chapter One</a></li>
+					<li><a href="three.html"> Chapter Two</a></li>
+					<li><a href="four.html"> Chapter Three</a></li>
+					<li><a href="Charts.html"> Graphs to be placed</a></li>
+					</ul>
+				</div>
+			</nav>
+				</header>
+<h1> Welcome to the Digital Age </h1>
+<h2> The Evolution of 
+Device Ownership 2000-2015 </h2>
+<div id="intro">
+<p> 	At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+</div>
+</div>
+
+
+
+	<script>			
+			(function() {
+				var body = $('body');
+				$('.menu-toggle').bind('click', function() {
+					body.toggleClass('menu-open');
+					return false;
+					});
+			})();
+			</script>	
+<div id="container2">				
+<script>src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" </script>
+<script src="js/jquery.bxslider.min.js"></script>
+
+<ul class="bxslider">
+  <li><div id="device">
+<h3> Smartphone Ownership: 2010-2015 </h3>
+<p>Smartphone Ownership 2010-2015: Click to see results</p>
+
+<img id="smart" class="phone" src="images/phone.png" alt="graphic">
+<img id="smart1" class="phone" src="images/phone1.png" alt="graphic">
+<img id="smart2" class="phone" src="images/phone2.png" alt="graphic">
+<img id="smart3" class="phone" src="images/phone3.png" alt="graphic">
+<img id="smart4" class="phone" src="images/phone4.png" alt="graphic">
+<img id="smart5" class="phone" src="images/phone5.png" alt="graphic">
+	<div id="telly"><p>2010: no data recorded</p></div>
+    <div id="telly1"><p>2011: 52%</p></div>
+    <div id="telly2"><p>2012: 65%</p></div>
+    <div id="telly3"><p>2013: 79%</p></div>
+    <div id="telly4"><p>2014: 85%</p></div>
+    <div id="telly5"><p>2015: 86%</p></div>
+    </div>
+<script>
+$(document).ready(function(){
+    
+    
+    // function to hide all divs 
+    function hideAll() {
+        $('#telly').hide();
+        $('#telly1').hide();
+        $('#telly2').hide();
+        $('#telly3').hide();
+        $('#telly4').hide();
+        $('#telly5').hide();
+    }
+    
+    // run that function right away
+    hideAll();
+    
+    // when any animal is clicked, make the suitable div appear
+    $('.phone').click (function() {
+       
+        hideAll();
+       
+        switch ( $(this).attr("id") ) {
+            case "smart" :
+                $('#telly').show();
+                break;
+            case "smart1" :
+                $('#telly1').show();
+                break;
+            case "smart2" :
+                $('#telly2').show();
+                break;
+            case "smart3" :
+                $('#telly3').show();
+                break;
+            case "smart4" :
+                $('#telly4').show();
+                break;
+            case "smart5" :
+                $('#telly5').show();
+                break;
+        }
+    }); 
+
+    
+});
+
+
+
+
+</script></li>
+  <li><img src="images/phone2.png" /></li>
+  <li><img src="images/phone3.png" /></li>
+  <li><img src="images/phone4.png" /></li>
+</ul>
+<script>
+$(document).ready(function(){
+  $('.bxslider').bxSlider();
+});
+</script>
+</div>
+</body>
+</html>
