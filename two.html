@@ -4,9 +4,13 @@
     <meta charset="utf-8">
 	<title> Final Project Page 2 </title>
 	<link href="styles/styles.css" rel="stylesheet">
-	<link href="lib/jquery.bxslider.css" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-</head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="js/jquery.bxslider.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-3d.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <link href="lib/jquery.bxslider.css" rel="stylesheet" />
+  </head>
 	<body class="menu">
      <div id="computers">
 	<img class="computer" id="ecomputers" src="images/Eniac.jpg" alt="computer" ></div>
@@ -19,10 +23,11 @@
 					Table of Contents
 				<div id="contents">
 				<ul>
+					<li><a href="index.html">Home</a></li>
 					<li><a href="two.html"> Chapter One</a></li>
 					<li><a href="three.html"> Chapter Two</a></li>
 					<li><a href="four.html"> Chapter Three</a></li>
-					<li><a href="Charts.html"> Graphs to be placed</a></li>
+					
 					</ul>
 				</div>
 			</nav>
@@ -44,11 +49,8 @@
 					return false;
 					});
 			})();
-			</script>	
-<div id="container2">				
-<script>src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" </script>
-<script src="js/jquery.bxslider.min.js"></script>
-
+			</script>
+<div id="container2">
 <ul class="bxslider">
   <li><div id="device">
 <h3> Internet Access</h3>
@@ -113,15 +115,288 @@ $(document).ready(function(){
     
 });
 </script></li>
-  <li><img src="images/phone2.png" /></li>
-  <li><img src="images/phone3.png" /></li>
-  <li><img src="images/phone4.png" /></li>
+  <li><script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
+		<script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+		ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9","ee6b7db5b51705a13dc2339db3edaf6d"];</script><div id='myChart'></div>
+	<script>
+	zingchart.THEME="classic";
+var myConfig = {
+    "graphset": [
+        {
+            "type": "bubble",
+            "background-color": "#f4f4f4 #ffffff",
+            "title": {
+                "text": "Who is not using the internet?",
+                "background-color": "none",
+                "y": "7%",
+                "font-color": "#000000",
+                "font-size": "18px",
+                "font-weight": "bold",
+                "font-family": "Roboto"
+            },
+            "plot": {
+                "scaling": "radius",
+                "size-factor":2.5,
+                "selection-mode": "multiple",
+                "cursor": "hand"
+            },
+            "scale-x": {
+                "values": "0:10:2",
+                "line-width": "1px",
+                "line-color": "#141414",
+                "alpha": "0.25",
+                "item": {
+                    "font-weight": "normal",
+                    "font-family": "Tahoma",
+                    "rules": [
+                        {
+                            "rule": "%v == 0",
+                            "text": "Lowest Volume"
+                        },
+                        {
+                            "rule": "%v >= 2",
+                            "text": ""
+                        },
+                        {
+                            "rule": "%v == 10",
+                            "text": "Highest Volume"
+                        }
+                    ]
+                },
+                "tick": {
+                    "visible": false
+                },
+                "guide": {
+                    "visible": false
+                }
+            },
+            "scale-y": {
+                "visible": false,
+                "values": "0:4:2",
+                "guide": {
+                    "visible": false
+                }
+            },
+            "series": [
+                {
+                    "values": [
+                        [
+                            0,
+                            2,
+                            20
+                        ]
+                    ],
+                    "marker": {
+                        "background-image": "PATTERN_LIGHT_VERTICAL",
+                        "background-color": "#6ab9e1",
+                        "alpha": "1"
+                    },
+                    "selected-marker": {
+                        "background-color": "#222222",
+                        "alpha": 0.25
+                    },
+                    "value-box": {
+                        "text": "<strong>Age 18-29</strong><br>3 percent",
+                        "placement":"top",
+                        "font-color": "#141414",
+                        "font-weight": "normal",
+                        "font-family": "Tahoma"
+                    },
+                    "tooltip": {
+                        "text": "3 percent",
+                        "background-color": "#000000",
+                        "shadow": false
+                    }
+                },
+                {
+                    "values": [
+                        [
+                            1.75,
+                            2,
+                            25
+                        ]
+                    ],
+                    "marker": {
+                        "background-image": "PATTERN_LIGHT_DOWNWARD_DIAGONAL",
+                        "background-color": "#0173C6",
+                        "alpha": "1"
+                    },
+                    "selected-marker": {
+                        "background-color": "#333333",
+                        "alpha": 0.25
+                    },
+                    "value-box": {
+                        "text": "<strong>Age 30-49</strong><br>6 percent",
+                        "placement":"top",
+                        "font-color": "#141414",
+                        "font-weight": "normal",
+                        "font-family": "Tahoma"
+                    },
+                    "tooltip": {
+                        "text": "6 percent",
+                        "background-color": "#000000",
+                        "shadow": false
+                    }
+                },
+                {
+                    "values": [
+                        [
+                            3.75,
+                            2,
+                            70
+                        ]
+                    ],
+                    "marker": {
+                        "background-image": "PATTERN_SMALL_GRID",
+                        "background-color": "#1876A3",
+                        "alpha": "1"
+                    },
+                    "selected-marker": {
+                        "background-color": "#555555",
+                        "alpha": 0.25
+                    },
+                    "value-box": {
+                        "text": "<strong>U.S. Adults</strong><br>15 percent",
+                        "placement":"top",
+                        "font-color": "#141414",
+                        "font-weight": "normal",
+                        "font-family": "Tahoma"
+                    },
+                    "tooltip": {
+                        "text": "15 percent",
+                        "background-color": "#000000",
+                        "shadow": false
+                    }
+                },
+                {
+                    "values": [
+                        [
+                            6.25,
+                            2,
+                            100
+                        ]
+                    ],
+                    "marker": {
+                        "background-image": "PATTERN_ZIGZAG",
+                        "background-color": "#1B3542",
+                        "alpha": "0.75"
+                    },
+                    "selected-marker": {
+                        "background-color": "#999999",
+                        "alpha": 0.25
+                    },
+                    "value-box": {
+                        "text": "<strong>Age 50-64</strong><br>19 percent",
+                        "placement":"top",
+                        "font-color": "#141414",
+                        "font-weight": "normal",
+                        "font-family": "Tahoma"
+                    },
+                    "tooltip": {
+                        "text": "19 percent",
+                        "background-color": "#000000",
+                        "shadow": false
+                
+                    }
+                }
+           ,
+                {
+                    "values": [
+                        [
+                            9,
+                            2,
+                            115
+                        ]
+                    ],
+                    "marker": {
+                        "background-image": "PATTERN_LARGE_CHECKER_BOARD",
+                        "background-color": "#008ccb",
+                        "alpha": "0.75"
+                    },
+                    "selected-marker": {
+                        "background-color": "#EEEEEE",
+                        "alpha": 0.25
+                    },
+                    "value-box": {
+                        "text": "<strong>Age 65+</strong><br>39 percent",
+                        "placement":"top",
+                        "font-color": "#141414",
+                        "font-weight": "normal",
+                        "font-family": "Tahoma"
+                    },
+                    "tooltip": {
+                        "text": "39 percent",
+                        "background-color": "#000000",
+                        "shadow": false
+                    }
+                }
+                 ],
+            "source": {
+                "font-family": "Tahoma",
+                "font-weight": "normal",
+                "font-style": "italic",
+                "margin-right": "8%",
+                "margin-bottom": "2%"
+            }
+        }
+    ]
+};
+ 
+zingchart.render({ 
+	id : 'myChart', 
+	data : myConfig, 
+	height: 500, 
+	width: 725 
+});
+</script></li>
+  <li><div id="container" style="height: 400px"></div>
+  <script>
+  $(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'pie',
+            options3d: {
+                enabled: true,
+                alpha: 45
+            }
+        },
+        title: {
+            text: 'Percentage of American Daily Internet Use'
+        },
+        subtitle: {
+            text: 'Pew Research'
+        },
+        plotOptions: {
+            pie: {
+                innerSize: 100,
+                depth: 45
+            }
+        },
+        series: [{
+            name: 'Delivered amount',
+            data: [
+                ['Almost Constantly', 21],
+                ['Several Times a Day', 42],
+                ['About Once a Day', 10],
+                ['Several Times a Week', 6],
+                ['Less Often', 7],
+                ['No Use', 14]
+      
+            ]
+        }]
+    });
+});
+  </script></li>
+
 </ul>
+</div>
 <script>
 $(document).ready(function(){
   $('.bxslider').bxSlider();
 });
 </script>
+
+
 </div>
 </body>
 </html>

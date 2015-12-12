@@ -17,12 +17,9 @@
 }
 #menu {
 		color: #000;
-		border-style: solid;
-        border-color: #fff;
-		opacity: 0.5;
 		background:#1B3542;
 	    padding:10px;
-	    margin:10px;
+	    
 	
 		}
 .menu-side {
@@ -96,20 +93,16 @@ a:link, a:visited, a:active {
 		border: 1px solid #ccc;
 		background: #f8f8f8;
 		margin: auto;
-		margin-bottom:120px;
+		margin-bottom:250px;
 		opacity: 0.8;
+		
 		}
-#container {
-			width:70%;
-			}
+
 #myChart {
-			width:70%;
 			margin:30px;
+			
 			}
-#myCharttwo {
-			width:70%;
-			margin:30px;
-			}
+
 
 #ecomputers {
 			width: 100%;
@@ -183,6 +176,7 @@ a:link, a:visited, a:active {
 			width:80%;
 			margin:auto;
 			}
+
 #telly {background:#0E445E;
 		color:#fff;
 		padding:5px;
@@ -296,15 +290,256 @@ a:link, a:visited, a:active {
 		width:90%;
 		height:30%;
 		}
+#social {
+		width:80px;
+		float:left;
+		padding:24px;
 		}
+#social1 {
+		width:80px;
+		float:left;
+		padding:24px;
+		}
+#social2 {
+		width:80px;
+		float:left;
+		padding:24px;
+		}
+#social3 {
+		width:80px;
+		float:left;
+		padding:24px;
+		}
+#social4 {
+		width:80px;
+		float:right;
+		padding:24px;
+		}
+
+#talk {
+      background:#0E445E;
+		color:#fff;
+		padding:5px;
+		width:46%;
+		text-align:center;
+		margin:auto;
+		margin-top:180px;
+		
+		}
+#talk1 {background:#14638A; 
+		color:#fff;
+		padding:5px;
+		width:46%;
+		text-align:center;
+		margin:auto;
+		margin-top:180px;
+		
+		}
+#talk2 {background:#1876A3;
+		color:#fff;
+		padding:5px;
+		width:46%;
+		text-align:center;
+		margin:auto;
+		margin-top:180px;
+		
+		}
+#talk3 {background:#1D8CC2;
+		color:#fff;
+		padding:5px;
+		width:46%;
+		text-align:center;
+		margin:auto;
+		margin-top:180px;
+		
+		}
+#talk4 {background:#209EDB;
+		color:#fff;
+		padding:5px;
+		width:46%;
+		text-align:center;
+		margin:auto;
+		margin-top:180px;
+		
+		}
+
+
 @media (max-width: 600px)
 {
 #ecomputers { height:30%;}
 body { background: #1B3542;}
-#intro { width:320px; margin:auto; margin-top:210px; padding:10px; background:#f8f8f8; color:#000;}
+#intro { width:320px; margin:auto; margin-top:350px; padding:10px; background:#f8f8f8; color:#000;}
 #menu { margin:0;border-style: none; opacity: 1.0;}
 #container { margin-top:210px; width:350px; height:600px; }
 #container2 { margin-top:210px; width:350px; height:600px; }
-h1 { font-size: 300%}
+h1 { font-size: 300%;}
+h2 { font-size: 200%;}
 #time { width:320px; height:600px;}
+#container2 {margin-top:20px;}
+#social {
+		width:50px;
+		float:left;
+		padding:3px;
+		}
+#social1 {
+		width:50px;
+		float:left;
+		padding:3px;
+		}
+#social2 {
+		width:50px;
+		float:left;
+		padding:3px;
+		}
+#social3 {
+		width:50px;
+		float:left;
+		padding:3px;
+		}
+#social4 {
+		width:50px;
+		float:right;
+		padding:3px;
+		}
+#wifi {
+		width:50px;
+		float:left;
+		padding:21px;
+		}
+#wifi1 {
+		width:50px;
+		float:left;
+		padding:21px;
+		}
+#wifi2 {
+		width:50px;
+		float:left;
+		padding:21px;
+		}
+#wifi3 {
+		width:50px;
+		float:left;
+		padding:21px;
+		}
+#wifi4 {
+		width:50px;
+		float:left;
+		padding:21px;
+		}
+#wifi5 {
+		width:50px;
+		float:left;
+		padding:21px;
+		}
+#smart {
+		width:25px;
+		float:left;
+		padding:34px;
+		}		
+
+#smart1 {
+		width:25px;
+		float:left;
+		padding:34px;
+		}
+#smart2 {
+		width:25px;
+		float:left;
+		padding:34px;
+		}
+#smart3 {
+		width:25px;
+		float:left;
+		padding:34px;
+		}
+#smart4 {
+		width:25px;
+		float:left;
+		padding:34px;
+		}
+#smart5 {
+		width:25px;
+		float:left;
+		padding:34px;
+		}
+
+#telly {background:#0E445E;
+		color:#fff;
+		padding:5px;
+		width:46%;
+		text-align:center;
+		margin:auto;
+		margin-top:250px;
+		
+		}
+#telly1 {background:#14638A;
+		color:#fff;
+		padding:5px;
+		width:46%;
+		text-align:center;
+		margin:auto;
+		margin-top:250px;
+		
+		}
+#telly2 {background:#1876A3;
+		color:#fff;
+		padding:5px;
+		width:46%;
+		text-align:center;
+		margin:auto;
+		margin-top:250px;
+		
+		}
+#telly3 {background:#1D8CC2;
+		color:#fff;
+		padding:5px;
+		width:46%;
+		text-align:center;
+		margin:auto;
+		margin-top:250px;
+		
+		}
+#telly4 {background:#209EDB;
+		color:#fff;
+		padding:5px;
+		width:46%;
+		text-align:center;
+		margin:auto;
+		margin-top:250px;
+		
+		}
+#telly5 {background:#26B8FF;
+		color:#fff;
+		padding:5px;
+		width:46%;
+		text-align:center;
+		margin:auto;
+		margin-top:250px;
+		
+		}		
+
+.menu-open {
+		left: 70px;
+	
+}
+.menu-side {
+		background: #1B3542;
+		border-right: 1px solid #1B3542;
+        color: #fff;
+		font-size:80%;
+		text-align:center;
+		opacity: 0.8;
+		position:fixed;
+		top:0;
+		left:-70px;
+		width: 50px;
+		height: 100%;
+		padding:10px;
+}
+* {
+		margin:0;
+		padding:0;
+		}
+
+
 }

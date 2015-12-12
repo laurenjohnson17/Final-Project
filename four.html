@@ -6,13 +6,16 @@
 	<link href="styles/styles.css" rel="stylesheet">
 	<link href="lib/jquery.bxslider.css" rel="stylesheet">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="js/jquery.bxslider.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <link href="lib/jquery.bxslider.css" rel="stylesheet" />
 </head>
 	<body class="menu">
 
 	<div id="computers">
 	<img class="computer" id="ecomputers" src="images/Eniac.jpg" alt="computer" ></div>
-
-	<div id="everything">
+    <div id="everything">
 	<header>
 		<div id="menu">
 		<a href="#" class="menu-toggle"> Click to Navigate </a>
@@ -21,16 +24,17 @@
 					Table of Contents
 				<div id="contents">
 				<ul>
+					<li><a href="index.html"> Home</a></li>
 					<li><a href="two.html"> Chapter One</a></li>
 					<li><a href="three.html"> Chapter Two</a></li>
 					<li><a href="four.html"> Chapter Three</a></li>
-					<li><a href="Charts.html"> Graphs to be placed</a></li>
 					</ul>
 				</div>
 			</nav>
 				</header>
 <h1> Welcome to the Digital Age </h1>
-<h2> The Evolution of Technology 2000-2015 </h2>
+<h2> The Evolution of 
+Device Ownership 2000-2015 </h2>
 <div id="intro">
 <p> 	At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
 </div>
@@ -47,50 +51,81 @@
 					});
 			})();
 			</script>	
-<div id="container2">				
-<script>src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" </script>
-<script src="js/jquery.bxslider.min.js"></script>
-
+<div id="container2">
 <ul class="bxslider">
-  <li><script src="https://code.highcharts.com/highcharts.js"></script>
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
-<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+  <li><div id="device">
+<h3> Social Media </h3>
+<p> 2015's Most Popular Social Media Sites by Use: Click to see results</p>
+
+<img id="social" class="like" src="images/media.png" alt="graphic">
+<img id="social1" class="like" src="images/media1.png" alt="graphic">
+<img id="social2" class="like" src="images/media2.png" alt="graphic">
+<img id="social3" class="like" src="images/media3.png" alt="graphic">
+<img id="social4" class="like" src="images/media4.png" alt="graphic">
+
+	<div id="talk"><p>Facebook: 72%</p></div>
+    <div id="talk1"><p>Twitter: 23%</p></div>
+    <div id="talk2"><p>Instagram: 28%</p></div>
+    <div id="talk3"><p>Pintrest: 31%</p></div>
+    <div id="talk4"><p>Linkdin: 25%</p></div>
+  
+    </div>
 <script>
-$(function () {
-    $('#container').highcharts({
-        chart: {
-            type: 'line'
-        },
-        title: {
-            text: 'Social Networking Use 2010-2015'
-        },
-        xAxis: {
-            categories: ['2010','2011','2012','2013','2014','2015']
-        },
-        yAxis: {
-            title: {
-                text: 'Percentage of Users'
-            }
-        },
-        series: [{
-            name: 'Internet Users',
-            data: [60, 65, 67, 73, 74,76]
-        }]
-        
-    });
+$(document).ready(function(){
+    
+    
+    // function to hide all divs 
+    function hideAll() {
+        $('#talk').hide();
+        $('#talk1').hide();
+        $('#talk2').hide();
+        $('#talk3').hide();
+        $('#talk4').hide();
+       
+    }
+    
+    // run that function right away
+    hideAll();
+    
+    // when any animal is clicked, make the suitable div appear
+    $('.like').click (function() {
+       
+        hideAll();
+       
+        switch ( $(this).attr("id") ) {
+            case "social" :
+                $('#talk').show();
+                break;
+            case "social1" :
+                $('#talk1').show();
+                break;
+            case "social2" :
+                $('#talk2').show();
+                break;
+            case "social3" :
+                $('#talk3').show();
+                break;
+            case "social4" :
+                $('#talk4').show();
+                break;
+          
+        }
+    }); 
+
+    
 });
 </script></li>
   <li><script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
 		<script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
-		ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9","ee6b7db5b51705a13dc2339db3edaf6d"];</script><div id='myCharttwo'></div>
-	<script>
-	zingchart.THEME="classic";
+		ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9","ee6b7db5b51705a13dc2339db3edaf6d"];</script><div id='myChart'></div>
+		<script>
+		zingchart.THEME="classic";
 var myConfig = 
         {
             "type": "bar",
             "background-color": "#fff",
             "title": {
-                "text": "The use of Social Networking of Women",
+                "text": "Social Media Use 2010-2015 by Percentage",
                 "font-size": "20px",
                 "font-weight": "bold",
                 "font-color": "#000",
@@ -107,29 +142,20 @@ var myConfig =
                 "margin":"10% 10%"
                 },
             "labels": [
-                {
-                    
-                    "background-repeat":"no-repeat",
-                    "background-position":"0 50%",
-                    "width":"26%",
-                    "height":"10%",
-                    "x": "70%",
-                    "y": "14%",
-                    
-                }
+  
             ],
             "scale-x": {
                 "line-color": "#000",
                 "guide": {
-                    
+                    "visible": "false"
                 },
                 "values": [
-                    "Women 2010",
-                    "Women 2011",
-                    "Women 2012",
-                    "Women 2013",
-                    "Women 2014",
-                    "Women 2015"
+                    "2010",
+                    "2011",
+                    "2012",
+                    "2013",
+                    "2014",
+                    "2015"
                 ],
                 "item": {
                     "font-color": "#000"
@@ -144,13 +170,13 @@ var myConfig =
                     "item": {
                         "offset-y": "10px"
                     },
-                    "text": "Percentage of Users",
+                    
                     "font-size": "10px",
                     "font-weight": "bold",
                     "font-color": "#000"
                 },
                 "guide": {
-                    
+                    "visible": "false"
                 },
                 "values": "0:100",
                 "item": {
@@ -163,13 +189,12 @@ var myConfig =
             "series": [
                 {
                     "values": [
-                        50,
-                        52,
-                        59,
+                        60,
                         65,
-                        63,
-                        68,
-                        
+                        67,
+                        73,
+                        74,
+                        76
                     ],
                     "styles": [
                         {
@@ -201,247 +226,90 @@ var myConfig =
                             "background-repeat": "repeat-y",
                             "background-fit": "x",
                             "background-color": "white"
-                        }
-                        ,
-                        {
+                        },
+                           {
                             "background-image": "http://www.zingchart.com/images/chartTwitter.png",
                             "background-repeat": "repeat-y",
                             "background-fit": "x",
                             "background-color": "white"
                         }
-                      
                     ]
                 }
             ]
         };
  
 zingchart.render({ 
-	id : 'myCharttwo', 
+	id : 'myChart', 
 	data : myConfig, 
 	height: 500, 
 	width: 725 
 });
 </script></li>
-  <li><script src= "https://cdn.zingchart.com/zingchart.min.js"></script>
-		<script> zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
-		ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9","ee6b7db5b51705a13dc2339db3edaf6d"];</script><div id='myChartthree'></div>
+
+<li><div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
 <script>
-zingchart.THEME="classic";
-var myConfig = 
+$(function () {
+    $('#container').highcharts({
+        title: {
+            text: 'Demographics of Social Media Use 2010- 2015',
+            x: -20 //center
+        },
+        subtitle: {
+            text: 'Source: PewResearch.com',
+            x: -20
+        },
+        xAxis: {
+            categories: ['Age 18-29', 'Age 30-49', 'Age 50-64', 'Age 65+']
+        },
+        yAxis: {
+            title: {
+                text: 'Percentage (%)'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: '%'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: '2010',
+            data: [78, 53, 33, 11]
+        }, {
+            name: '2011',
+            data: [80, 60, 37, 13]
+        }, {
+            name: '2012',
+            data: [83, 67, 43, 19]
+        }, {
+        name: '2013',
+            data: [88, 73, 52, 26]
+        },{
+        name: '2014',
+            data: [84, 77, 52, 27]
+        },
         {
-            "type": "area",
-            "stacked": true,
-            "background-color": "#1D2629",
-            "title": {
-                "text": "Social Media Use",
-                "font-family": "arial",
-                "font-size": "20px",
-                "font-weight": "normal",
-                "background-color": "none",
-                "text-align": "left"
-                
-            },
-            "legend": {
-                "margin":"5% auto auto auto",
-                "layout": "float",
-                "font-family": "arial",
-                "font-size": "10px",
-                "background-color": "#1D2629",
-                "border-color": "#808080",
-                "toggle-action": "remove",
-                "align":"center",
-                "item": {
-                    "marker-style": "match",
-                    "font-color": "#ffffff"
-                }
-            },
-            "plot": {
-                "tooltip-text": "%t: %v",
-                "active-area":true,
-                "animation": {
-                    "speed": 0.5,
-                    "effect": 4
-                },
-                "shadow": false
-            },
-            "plotarea": {
-                "margin": "10% 8% 14% 12%"
-            },
-            "series": [
-                {
-                    "text": "Ages 18 to 29",
-                    "values": [
-                        78,
-                        80,
-                        83,
-                        88,
-                        84,
-                        90
-                    ],
-                    "line-width": "2px",
-                    "line-color": "#115373",
-                    "background-color": "#115373",
-                    "marker": {
-                        "type": "circle",
-                        "size": "4px",
-                        "border-width": "0px",
-                        "background-color": "#115373",
-                        "border-color": "#115373",
-                        "shadow": false
-                    }
-                },
-                {
-                    "text": " Ages 30-49",
-                    "values": [
-                        53,
-                        60,
-                        67,
-                        73,
-                        77,
-                        77
-                    ],
-                    "line-width": "2px",
-                    "line-color": "#1877A3",
-                    "background-color": "#1877A3",
-                    "marker": {
-                        "type": "circle",
-                        "size": "4px",
-                        "border-width": "0px",
-                        "background-color": "#1877A3",
-                        "border-color": "#1877A3",
-                        "shadow": false
-                    }
-                },
-                {
-                    "text": "Ages 50-64",
-                    "values": [
-                        33,
-                        37,
-                        43,
-                        52,
-                        52,
-                        51
-                    ],
-                    "line-width": "2px",
-                    "line-color": "#1D92C9",
-                    "background-color": "#1D92C9",
-                    "marker": {
-                        "type": "circle",
-                        "size": "4px",
-                        "border-width": "0px",
-                        "background-color": "#1D92C9",
-                        "border-color": "#1D92C9",
-                        "shadow": false
-                    }
-                },
-                {
-                    "text": "Ages 65+",
-                    "values": [
-                        11,
-                        13,
-                        19,
-                        26,
-                        27,
-                        35
-                    ],
-                    "line-width": "2px",
-                    "line-color": "#25B9FF",
-                    "background-color": "#25B9FF",
-                    "marker": {
-                        "type": "circle",
-                        "size": "4px",
-                        "border-width": "0px",
-                        "background-color": "#25B9FF",
-                        "border-color": "#25B9FF",
-                        "shadow": false
-                    }
-                }
-            ],
-            "scale-x": {
-                "values": [
-                    "2010",
-                    "2011",
-                    "2012",
-                    "2013",
-                    "2014",
-                    "2015"
-                ],
-                "line-color": "#808080",
-                "line-width": "1px",
-                "line-style": "solid",
-                "guide": {
-                    "line-color": "#808080",
-                    "line-style": "solid"
-                },
-                "tick": {
-                    "line-width": "1px",
-                    "line-color": "#808080"
-                },
-                "item": {
-                    "font-size": "12px",
-                    "font-color": "#808080",
-                    "font-weight": "normal",
-                    "font-family": "arial",
-                    "offset-y": "5%"
-                }
-            },
-            "scale-y": {
-                "values": "300",
-                 "line-width": "1px",
-                "line-color": "#808080",
-                "guide": {
-                    "line-color": "#808080",
-                    "alpha": 0.1,
-                    "line-style": "solid"
-                },
-                "tick": {
-                    "line-width": "1px",
-                    "line-color": "#808080"
-                },
-                "item": {
-                    "font-size": "12px",
-                    "font-color": "#808080",
-                    "font-weight": "normal",
-                    "font-family": "arial",
-                    "offset-x": "-5%"
-                }
-            },
-            "crosshair-x": {
-                "line-width": "2px",
-                "line-color": "#FFFFFF",
-                "offset-y": "10%",
-                "marker": {
-                    "visible": false
-                },
-                "plot-label": {
-                    
-                    "font-color": "#000000",
-                    "font-family": "arial"
-                },
-                "scale-label": {
-                    "background-transparent": true,
-                    "offset-y": "5%"
-                }
-            },
-            "tooltip": {
-                "visible": false
-            }
-};
- 
-zingchart.render({ 
-	id : 'myChartthree', 
-	data : myConfig, 
-	height: 500, 
-	width: 725 
+            name: '2015',
+            data: [90, 77, 51, 35]
+        }]
+    });
 });
-</script></li>
-  <li></li>
+</script>
+</li>
 </ul>
+</div>
 <script>
 $(document).ready(function(){
   $('.bxslider').bxSlider();
 });
 </script>
-</div>
 </body>
 </html>
